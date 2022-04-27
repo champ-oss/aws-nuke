@@ -56,14 +56,16 @@ accounts:
       IAMRolePolicyAttachment:
         - type: glob
           value: "AWSReserved*"
+        - property: "RoleName"
+          value: "OrganizationAccountAccessRole"
 
       IAMSAMLProvider:
         - type: glob
           value: "*/AWSSSO_*"
 
       IAMUserPolicyAttachment:
-        - property: "tag:nuke"
-          value: "false"
+        - property: "UserName"
+          value: "github"
 
       Route53ResourceRecordSet:
         - property: "Type"

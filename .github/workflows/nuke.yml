@@ -1,0 +1,15 @@
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  nuke:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker run --rm -v $PWD/aws-nuke.yaml:/config.yml
+          quay.io/rebuy/aws-nuke@sha256:3f97dc19b74017918254e026ea75f06bc9e496d517b41a625c763b80f1b2b32e
+          --config /config.yml --force --force-sleep 3 --quiet --no-dry-run
+          --access-key-id ${{ secrets.AWS_ACCESS_KEY_ID }} --secret-access-key ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -67,6 +67,10 @@ accounts:
         - property: "UserName"
           value: "github"
 
+      Route53HostedZone:
+        - property: "Name"
+          value: "oss.champtest.net."
+
       Route53ResourceRecordSet:
         - property: "Type"
           value: "NS"

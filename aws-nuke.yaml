@@ -66,6 +66,8 @@ accounts:
       IAMUserPolicyAttachment:
         - property: "UserName"
           value: "github"
+        - property: "UserName"
+          value: "dependabot"
 
       Route53HostedZone:
         - property: "Name"

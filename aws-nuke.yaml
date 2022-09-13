@@ -59,6 +59,8 @@ accounts:
       IAMRolePolicy:
         - type: glob
           value: "AWSReserved*"
+        - type: glob
+          value: "OrganizationAccountAccessRole -> *"
         - property: "tag:role:git"
           value: "cf-aws-oidc-github"
 

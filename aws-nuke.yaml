@@ -42,6 +42,13 @@ account-blocklist:
 accounts:
   "912455136424":
     filters:
+      CloudFormationStack:
+        - "cf-oidc-github"
+
+      IAMOpenIDConnectProvider:
+        - type: glob
+          value: "*:oidc-provider/token.actions.githubusercontent.com"
+
       IAMRole:
         - type: glob
           value: "AWSReserved*"
@@ -50,8 +57,8 @@ accounts:
       IAMRolePolicy:
         - type: glob
           value: "AWSReserved*"
-        - type: glob
-          value: "OrganizationAccountAccessRole -> *"
+        - property: "tag:role:git"
+          value: "cf-aws-oidc-github"
 
       IAMRolePolicyAttachment:
         - type: glob

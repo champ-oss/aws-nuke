@@ -53,6 +53,8 @@ accounts:
         - type: glob
           value: "AWSReserved*"
         - "OrganizationAccountAccessRole"
+        - property: "tag:git"
+          value: "cf-aws-oidc-github"
 
       IAMRolePolicy:
         - type: glob
@@ -65,6 +67,8 @@ accounts:
           value: "AWSReserved*"
         - property: "RoleName"
           value: "OrganizationAccountAccessRole"
+        - property: "tag:role:git"
+          value: "cf-aws-oidc-github"
 
       IAMSAMLProvider:
         - type: glob

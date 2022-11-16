@@ -122,6 +122,10 @@ accounts:
         - type: glob
           value: "*/AWSSSO_*"
 
+      IAMUser:
+        - "github"
+        - "dependabot"
+
       IAMUserPolicyAttachment:
         - property: "UserName"
           value: "github"

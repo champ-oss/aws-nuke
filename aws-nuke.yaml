@@ -43,6 +43,54 @@ accounts:
       CloudFormationStack:
         - "cf-oidc-github"
 
+      EC2Address:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2DHCPOption:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2InternetGateway:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2InternetGatewayAttachment:
+        - property: "tag:igw:git"
+          value: "env-vega-oss"
+
+      EC2NATGateway:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2NetworkInterface:
+        - property: "Status"
+          value: "in-use"
+
+      EC2RouteTable:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2SecurityGroup:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2Subnet:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2VPC:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      ELBv2:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      ELBv2TargetGroup:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
       IAMOpenIDConnectProvider:
         - type: glob
           value: "*:oidc-provider/token.actions.githubusercontent.com"
@@ -96,3 +144,8 @@ accounts:
         - type: glob
           value: "s3://env-vega*"
        
+      S3Object:
+        - property: "Bucket"
+          value: "env-tfbackend-oss-logs"
+        - property: "Bucket"
+          value: "env-tfbackend-oss-backend"

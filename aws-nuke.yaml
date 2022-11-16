@@ -48,6 +48,7 @@ accounts:
           value: "env-vega-oss"
 
       EC2DHCPOption:
+        - "dopt-0acdf35ff77430503"
         - property: "tag:git"
           value: "env-vega-oss"
 
@@ -68,6 +69,7 @@ accounts:
           value: "in-use"
 
       EC2RouteTable:
+        - "rtb-0e6847a795156af46"
         - property: "tag:git"
           value: "env-vega-oss"
 
@@ -80,6 +82,10 @@ accounts:
           value: "env-vega-oss"
 
       EC2VPC:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2VPCEndpoint:
         - property: "tag:git"
           value: "env-vega-oss"
 
@@ -101,6 +107,8 @@ accounts:
         - "OrganizationAccountAccessRole"
         - property: "tag:git"
           value: "cf-aws-oidc-github"
+        - type: glob
+          value: "env-vega-oss-*"
 
       IAMRolePolicy:
         - type: glob
@@ -109,6 +117,8 @@ accounts:
           value: "OrganizationAccountAccessRole -> *"
         - property: "tag:role:git"
           value: "cf-aws-oidc-github"
+        - type: glob
+          value: "env-vega-oss-*"
 
       IAMRolePolicyAttachment:
         - type: glob

@@ -25,8 +25,6 @@ resource-types:
   - GlobalAccelerator
   - GlobalAcceleratorEndpointGroup
   - GlobalAcceleratorListener
-  - IAMUser
-  - IAMUserAccessKey
   - LifecycleHook
   - MachineLearningDataSource
   - MachineLearningEvaluation
@@ -45,6 +43,60 @@ accounts:
       CloudFormationStack:
         - "cf-oidc-github"
 
+      EC2Address:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2DHCPOption:
+        - "dopt-0acdf35ff77430503"
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2InternetGateway:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2InternetGatewayAttachment:
+        - property: "tag:igw:git"
+          value: "env-vega-oss"
+
+      EC2NATGateway:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2NetworkInterface:
+        - property: "Status"
+          value: "in-use"
+
+      EC2RouteTable:
+        - "rtb-0e6847a795156af46"
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2SecurityGroup:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2Subnet:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2VPC:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      EC2VPCEndpoint:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      ELBv2:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
+      ELBv2TargetGroup:
+        - property: "tag:git"
+          value: "env-vega-oss"
+
       IAMOpenIDConnectProvider:
         - type: glob
           value: "*:oidc-provider/token.actions.githubusercontent.com"
@@ -55,6 +107,8 @@ accounts:
         - "OrganizationAccountAccessRole"
         - property: "tag:git"
           value: "cf-aws-oidc-github"
+        - type: glob
+          value: "env-vega-oss-*"
 
       IAMRolePolicy:
         - type: glob
@@ -63,6 +117,8 @@ accounts:
           value: "OrganizationAccountAccessRole -> *"
         - property: "tag:role:git"
           value: "cf-aws-oidc-github"
+        - type: glob
+          value: "env-vega-oss-*"
 
       IAMRolePolicyAttachment:
         - type: glob
@@ -75,6 +131,16 @@ accounts:
       IAMSAMLProvider:
         - type: glob
           value: "*/AWSSSO_*"
+
+      IAMUser:
+        - "github"
+        - "dependabot"
+
+      IAMUserAccessKey:
+        - type: glob
+          value: "github -> *"
+        - type: glob
+          value: "dependabot -> *"
 
       IAMUserPolicyAttachment:
         - property: "UserName"
@@ -91,3 +157,15 @@ accounts:
           value: "NS"
         - property: "Type"
           value: "SOA"
+
+      S3Bucket:
+        - type: glob
+          value: "s3://env-tfbackend*"
+        - type: glob
+          value: "s3://env-vega*"
+       
+      S3Object:
+        - property: "Bucket"
+          value: "env-tfbackend-oss-logs"
+        - property: "Bucket"
+          value: "env-tfbackend-oss-backend"

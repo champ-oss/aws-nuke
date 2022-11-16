@@ -126,6 +126,12 @@ accounts:
         - "github"
         - "dependabot"
 
+      IAMUserAccessKey:
+        - type: glob
+          value: "github -> *"
+        - type: glob
+          value: "dependabot -> *"
+
       IAMUserPolicyAttachment:
         - property: "UserName"
           value: "github"

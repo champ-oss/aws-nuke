@@ -43,6 +43,12 @@ accounts:
       CloudFormationStack:
         - "cf-oidc-github"
 
+      CloudWatchLogsLogGroup:
+        - type: glob # https://github.com/rebuy-de/aws-nuke/issues/500
+          value: "/aws/ecs/containerinsights/*/performance"
+        - type: glob
+          value: "env-vega-oss-vpc-flow-logs*"
+
       EC2Address:
         - property: "tag:git"
           value: "env-vega-oss"

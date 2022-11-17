@@ -71,11 +71,12 @@ accounts:
           value: "env-vega-oss"
 
       EC2NetworkInterface:
-        - property: "Status"
-          value: "in-use"
+        - "eni-06c3b5a5dce0bc253"
+        - "eni-0f8d22d7c6f3e718b"
 
       EC2RouteTable:
         - "rtb-0e6847a795156af46"
+        - "rtb-08dfeeb74d4a511f2"
         - property: "tag:git"
           value: "env-vega-oss"
 

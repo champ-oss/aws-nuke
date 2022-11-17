@@ -76,6 +76,7 @@ accounts:
 
       EC2RouteTable:
         - "rtb-0e6847a795156af46"
+        - "rtb-08dfeeb74d4a511f2"
         - property: "tag:git"
           value: "env-vega-oss"
 

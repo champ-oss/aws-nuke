@@ -170,7 +170,11 @@ accounts:
           value: "s3://env-tfbackend*"
         - type: glob
           value: "s3://env-vega*"
-       
+
+      SSMParameter:
+        - property: "tag:git"
+          value: "terraform-aws-keycloak"
+
       S3Object:
         - property: "Bucket"
           value: "env-tfbackend-oss-logs"

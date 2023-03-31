@@ -116,6 +116,8 @@ accounts:
           value: "cf-aws-oidc-github"
         - type: glob
           value: "env-vega-oss-*"
+        - type: glob
+          value: "champ-testing-spacelift-*"
 
       IAMRolePolicy:
         - type: glob

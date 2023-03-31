@@ -124,10 +124,10 @@ accounts:
           value: "OrganizationAccountAccessRole -> *"
         - property: "tag:role:git"
           value: "cf-aws-oidc-github"
-	- property: "tag:role:git"
-          value: "champ-testing-spacelift"
         - type: glob
           value: "env-vega-oss-*"
+        - type: glob
+          value: "champ-testing-spacelift-*"
 
       IAMRolePolicyAttachment:
         - type: glob

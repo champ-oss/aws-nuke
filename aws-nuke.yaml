@@ -117,7 +117,7 @@ accounts:
         - type: glob
           value: "env-vega-oss-*"
         - type: glob
-          value: "champ-testing-spacelift-*"
+          value: "champ-testing-*"
 
       IAMRolePolicy:
         - type: glob
@@ -137,7 +137,7 @@ accounts:
         - property: "tag:role:git"
           value: "cf-aws-oidc-github"
         - type: glob
-          value: "champ-testing-spacelift-*"
+          value: "champ-testing-*"
 
       IAMSAMLProvider:
         - type: glob

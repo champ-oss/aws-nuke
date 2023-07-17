@@ -33,6 +33,7 @@ resource-types:
   - OpsWorksUserProfile
   - ServiceCatalogTagOption
   - ServiceCatalogTagOptionPortfolioAttachment
+  - EC2NetworkInterface
 
 account-blocklist:
 - "999999999999"
@@ -48,6 +49,8 @@ accounts:
           value: "/aws/ecs/containerinsights/*/performance"
         - type: glob
           value: "env-vega-oss-vpc-flow-logs*"
+        - type: glob
+          value: "*/error"
 
       EC2Address:
         - property: "tag:git"

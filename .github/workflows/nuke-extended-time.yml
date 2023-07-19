@@ -1,4 +1,4 @@
-# nuke extended
+name: nuke-extended-time
 
 on:
   schedule:

@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker run --rm -v $PWD/aws-nuke.yaml:/config.yml
-          quay.io/rebuy/aws-nuke:v2.20.0
+          quay.io/rebuy/aws-nuke:v2.25.0
           --config /config.yml --force --force-sleep 3 --quiet
           --access-key-id ${{ secrets.AWS_ACCESS_KEY_ID }} --secret-access-key ${{ secrets.AWS_SECRET_ACCESS_KEY }}

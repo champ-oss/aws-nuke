@@ -78,9 +78,9 @@ accounts:
       EC2InternetGatewayAttachment:
         - property: "tag:igw:git"
           value: "env-vega-oss"
-        - property: "OwnerID"
+        - property: "igw:OwnerID"
           value: "260821837747"
-        - property: "OwnerID"
+        - property: "igw:OwnerID"
           value: "168013575370"
 
       EC2NATGateway:
@@ -121,9 +121,7 @@ accounts:
 
       EC2TGW:
         - property: "OwnerID"
-          value: "260821837747"
-        - property: "OwnerID"
-          value: "168013575370"
+          value: "265722707952"
 
       EC2VPC:
         - property: "tag:git"

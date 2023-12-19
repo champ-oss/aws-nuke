@@ -120,7 +120,7 @@ accounts:
           value: "168013575370"
 
       EC2TGW:
-        - property: "OwnerID"
+        - property: "OwnerId"
           value: "265722707952"
 
       EC2VPC:

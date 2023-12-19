@@ -62,18 +62,36 @@ accounts:
         - "dopt-0acdf35ff77430503"
         - property: "tag:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2InternetGateway:
         - property: "tag:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2InternetGatewayAttachment:
         - property: "tag:igw:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2NATGateway:
         - property: "tag:git"
           value: "env-vega-oss"
+
+      EC2NetworkACL:
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2NetworkInterface:
         - "eni-06c3b5a5dce0bc253"
@@ -84,6 +102,10 @@ accounts:
         - "rtb-08dfeeb74d4a511f2"
         - property: "tag:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2SecurityGroup:
         - property: "tag:git"
@@ -92,10 +114,24 @@ accounts:
       EC2Subnet:
         - property: "tag:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
+
+      EC2TGW:
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2VPC:
         - property: "tag:git"
           value: "env-vega-oss"
+        - property: "OwnerID"
+          value: "260821837747"
+        - property: "OwnerID"
+          value: "168013575370"
 
       EC2VPCEndpoint:
         - property: "tag:git"

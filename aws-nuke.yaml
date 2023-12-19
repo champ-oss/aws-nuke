@@ -34,6 +34,8 @@ resource-types:
   - ServiceCatalogTagOption
   - ServiceCatalogTagOptionPortfolioAttachment
   - EC2NetworkInterface
+  - NetpuneSnapshot
+  - OSPackage
 
 account-blocklist:
 - "999999999999"

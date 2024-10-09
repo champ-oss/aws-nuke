@@ -134,7 +134,8 @@ accounts:
       EC2VPCEndpoint:
         - property: "tag:git"
           value: "env-vega-oss"
-
+      ECRRepository:
+        - "Repository: terraform-aws-alert"
       ELBv2:
         - property: "tag:git"
           value: "env-vega-oss"
